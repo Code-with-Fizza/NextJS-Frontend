@@ -7,12 +7,7 @@ const Layout = dynamic(() => import("../components/layout"), {
 });
 import IntegrationData from "../components/createIntegration";
 
-const AddIntegrationData = dynamic(
-  () => import("../components/createIntegration/addIntegration"),
-  {
-    ssr: false,
-  }
-);
+
 import userAccess from "../helper/access";
 import BlackSpinner from "../components/reusableUi/BlackSpinner";
 
