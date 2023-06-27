@@ -25,18 +25,18 @@ const handleSubmit = async (e) => {
    
       redirect: false
     }).then((res) => {
-        if (res.ok) {
-            console.log(res,"res")
+        // if (res.ok) {
+        //     console.log(res,"res")
             // dispatch(setToken(res?.data?.access_token))
             // dispatch(setRole("admin"))
             // localStorage.setItem("auth", res?.data?.access_token)
             // localStorage.setItem("role", "admin")
             router.push("/analytics")
-        }
-       else{
-        setError("Invalid Credentials please try again")
-        setLoading(false)
-       }
+    //     }
+    //    else{
+    //     setError("Invalid Credentials please try again")
+    //     setLoading(false)
+    //    }
        
       
     })
