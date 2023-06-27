@@ -33,12 +33,12 @@ const options = {
   //     return session;
   //   },
   // },
-  session: {
-    jwt: true,
-  },
-  pages: {
-    signIn: "/auth/signin",
-  },
+  // session: {
+  //   jwt: true,
+  // },
+  // pages: {
+  //   signIn: "/auth/signin",
+  // },
 };
 
 export default (req, res) => NextAuth(req, res, options);
