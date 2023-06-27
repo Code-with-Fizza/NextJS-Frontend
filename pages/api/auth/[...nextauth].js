@@ -36,9 +36,9 @@ const options = {
   // session: {
   //   jwt: true,
   // },
-  // pages: {
-  //   signIn: "/auth/signin",
-  // },
+  pages: {
+    signIn: "/analytics",
+  },
 };
 
 export default (req, res) => NextAuth(req, res, options);
