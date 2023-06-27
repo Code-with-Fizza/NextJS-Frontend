@@ -14,11 +14,11 @@ const LoginForm = () => {
 const router = useRouter()
   
   
-const handleSubmit = async (e) => {
+const handleSubmits = async (e) => {
     e.preventDefault()
     setLoading(true)
     setError("")
-
+ 
     signIn('credentials', {
       email,
       password,
@@ -48,7 +48,21 @@ const handleSubmit = async (e) => {
             dispatch(setToken(null))
         })
   };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setError("");
 
+    // Simulate authentication request
+    if (email === "admin@gmail.com" && password === "123") {
+      // Successful login
+      router.push("/analytics");
+    } else {
+      // Invalid credentials
+      setError("Invalid Credentials. Please try again.");
+      setLoading(false);
+    }
+  };
     
 
     return (
