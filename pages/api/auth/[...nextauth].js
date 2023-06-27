@@ -20,19 +20,19 @@ const options = {
       },
     }),
   ],
-  callbacks: {
-    async jwt(token, user) {
-      if (user) {
-        token.id = user.id;
-        token.name = user.name;
-      }
-      return token;
-    },
-    async session(session, token) {
-      session.user = token;
-      return session;
-    },
-  },
+  // callbacks: {
+  //   async jwt(token, user) {
+  //     if (user) {
+  //       token.id = user.id;
+  //       token.name = user.name;
+  //     }
+  //     return token;
+  //   },
+  //   async session(session, token) {
+  //     session.user = token;
+  //     return session;
+  //   },
+  // },
   session: {
     jwt: true,
   },
